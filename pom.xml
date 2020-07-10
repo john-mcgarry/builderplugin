@@ -1,0 +1,40 @@
+<!-- This is the POM.xml file. This is the file that tells Maven, the tool that creates
+    JAR files, how to compile your code. -->
+<project>
+    <groupId>com.mcip.builderplug</groupId> <!-- This is the directory that your code lives in (inside src/main/java). A period separates directories. -->
+    <artifactId>BuilderPlugin</artifactId> <!-- This is the name of the project, and affects what the JAR file is called. -->
+    <version>0.0.1</version> <!-- This is the version of YOUR code. This is whatever you want it to be. -->
+
+    <build> <!-- This section tells Maven that you want to compile your code. -->
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.8.0</version>
+            </plugin>
+        </plugins>
+    </build>
+
+    <properties>
+    <maven.compiler.source>1.14</maven.compiler.source>
+    <maven.compiler.target>1.14</maven.compiler.target>
+  </properties>
+
+    <repositories> <!-- This section tells Maven where to find the Bukkit and Spigot APIs. -->
+        <repository>
+            <id>spigotmc-repo</id>
+            <url>https://hub.spigotmc.org/nexus/content/repositories/snapshots/</url>
+        </repository>
+    </repositories>
+
+    <dependencies> <!-- This section tells Maven that you want to use the Spigot API in your code. -->
+        <dependency>
+            <groupId>org.spigotmc</groupId>
+            <artifactId>spigot-api</artifactId>
+            <version>1.15.2-R0.1-SNAPSHOT</version>
+            <scope>provided</scope>
+        </dependency>
+    </dependencies>
+
+    <modelVersion>4.0.0</modelVersion> <!-- Don't worry about this line. -->
+</project>
