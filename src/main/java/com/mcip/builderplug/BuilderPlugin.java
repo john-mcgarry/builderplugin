@@ -12,44 +12,17 @@ import org.bukkit.event.player.PlayerInteractEvent;
 import org.bukkit.inventory.Inventory;
 import org.bukkit.plugin.java.JavaPlugin;
 
-// Here, we're creating a class called `StarterPlugin`. The server will
-// create a single instance of this class when the server runs.
-//
-// `extends JavaPlugin` means that our class is going to inherit default
-// values from the built-in `JavaPlugin` class. We'll learn more about
-// object inheritance later. For now, think of this as saying that our
-// class is a plugin.
-//
-// `implements Listener` tells the server that when certain events happen,
-// like a player joining or a block breaking, we want certain methods in
-// our class to be called. We'll learn more about the idea of a listener
-// (and the idea of interfaces, which `implements` refers to) later.
 public class BuilderPlugin extends JavaPlugin implements Listener {
 
     @Override
-    // @Override means that we want to override the default
-    // definition of this method that JavaPlugin provides.
-    //
-    // The onEnable() method is called when the server starts.
+
     public void onEnable() {
-        // When we're inside our plugin class, we have access to a bunch
-        // of useful methods like `getServer()` and `getLogger()`. These
-        // methods are defined by the `JavaPlugin` class, and because our
-        // class _extends_ `JavaPlugin`, we have access to them as well.
-
-        // This line gets the server's plugin manager, and then tells it
-        // to call methods annotated with @EventListener when things happen
-        // on the server.
         getServer().getPluginManager().registerEvents(this, this);
-
-        // This line outputs "StarterPlugin enabled!" to the console. It's
-        // just like `System.out.println()`, except it outputs to the server
-        // logs.
         getLogger().info("StarterPlugin enabled!");
     }
 
     @Override
-    // The onDisable() method runs whenever the server turns off.
+
     public void onDisable() {
         getLogger().info("StarterPlugin disabled!");
     }
