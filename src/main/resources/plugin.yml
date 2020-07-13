@@ -1,6 +1,6 @@
 # This file tells the server important information about the plugin (metadata).
-name: StarterPlugin # This is what the plugin shows up as in the plugin list
+name: BuilderPlugin # This is what the plugin shows up as in the plugin list
 version: 0.0.1 # This is the version of the plugin. It should be the same version as in POM.xml.
 description: This is an empty starter plugin to learn about structure # This is a short description of the plugin
 main: com.mcip.builderplug.BuilderPlugin # This is the path to our main class (the one that `extends JavaPlugin`), relative to `src/main/java`, with periods denoting subdirectories.
-api-version: 1.15 # This tells the server what version of Minecraft the plugin is intended for
+api-version: 1.16 # This tells the server what version of Minecraft the plugin is intended for
